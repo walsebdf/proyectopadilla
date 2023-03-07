@@ -1,0 +1,227 @@
+body{
+    background-image: url(../images/eeporigdark.jpg);
+    background-size: 100%;
+}
+
+header{
+    background: linear-gradient(green, black);
+    text-align: center;
+    box-shadow: 10px 5px 15px greenyellow;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.escudoSinTexto{
+    display: none;
+}
+
+.navbar-brand{
+    color: greenyellow;
+    font-family: 'Audiowide', cursive;
+    font-size: 25px;
+}
+
+.nav-item{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav-item a{
+    color: greenyellow;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.dropdown-menu .dropdown-item{
+    color: green;
+}
+
+.navbar-toggler .navbar-toggler-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28156, 255, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.contenidoPrincipal{
+    display: grid;
+    grid-template-areas: 
+    "novedades  titulo          titulo"
+    "novedades  contenidoup     publicidad"
+    "novedades  contenidodown   publicidad"
+    "footer     footer          footer";
+    grid-template-columns: 35vh auto 25vh;
+    grid-template-rows: 10vh 300px auto 30vh;
+}
+
+#titulo{
+    grid-area: titulo;
+    font-family: 'Bangers', cursive;
+    color: greenyellow;
+    padding-top: 15px;
+    box-shadow: 10px 5px 15px greenyellow;
+}
+
+.tituloResponsive{
+    display: none;
+}
+
+#novedades{
+    grid-area: novedades;
+    color: greenyellow;
+    font-family: 'Bangers', cursive;
+    box-shadow: 10px 5px 15px greenyellow;
+}
+
+#novedades li a{
+    color: greenyellow;
+    font-family: 'Raleway', sans-serif;
+}
+
+#novedades li{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#contenidoup{
+    grid-area: contenidoup;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: inset -10px -5px 15px greenyellow;
+}
+
+#publicidad{
+    grid-area: publicidad;
+    padding-left: 4%;
+    box-shadow: 10px 5px 15px greenyellow;
+}
+
+#contenidodown{
+    grid-area: contenidodown;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 10px 5px 15px greenyellow;
+}
+
+.titulo p a{
+    font-family: 'Bangers', cursive;
+    color: greenyellow;
+}
+
+.descripcion{
+    color: greenyellow;
+}
+
+.imagen{
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: greenyellow;
+}
+
+.lemaPadillero{
+    font-family: 'Bangers', cursive;
+    color: greenyellow;
+}
+
+.enlaces ul li a{
+    color: greenyellow;
+}
+
+@media screen and (max-width: 1590px) {
+
+    .contenidoPrincipal{
+        display: grid;
+        grid-template-areas: 
+        "novedades  titulo"
+        "novedades  contenidoup"
+        "novedades  contenidodown"
+        "publicidad publicidad"
+        "footer     footer";
+        grid-template-columns: 35vh auto;
+        grid-template-rows: 10vh auto auto 30vh 30vh;
+    }
+
+    .escudoSinTexto{
+        display: block;
+    }
+
+    .escudoConTexto{
+        display: none;
+    }
+
+    #publicidad{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+        box-shadow: inset 0px -5px 15px greenyellow;
+    }
+
+    #publicidad2{
+        display: none;
+    }
+    
+    #publicidad4{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1342px) {
+
+    .tituloResponsive{
+        display: block;
+    }
+
+    .tituloCompleto{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 991px) {
+
+    .contenidoPrincipal{
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "contenidoup"
+        "contenidodown"
+        "novedades"
+        "publicidad"
+        "footer";
+        grid-template-rows: auto auto auto auto 150px auto;
+        grid-template-columns: 100%;
+    }
+
+    #publicidad{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: center;
+    }
+
+    #publicidad1{
+        display: none;
+    }
+    
+    #publicidad3{
+        display: none;
+    }
+
+    #contenidoup{
+        box-shadow: inset 0px -5px 15px greenyellow;
+}
+
+}
