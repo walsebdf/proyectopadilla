@@ -1,5 +1,5 @@
 body{
-    background-image: url(../images/eeporigdark.jpg);
+    background-image: url(../../images/eeporigdark.jpg);
     background-size: 100%;
 }
 
@@ -42,84 +42,92 @@ header{
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28156, 255, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.contenidoPrincipal{
+.contenidoPrincipaltmt{
     display: grid;
     grid-template-areas: 
-    "novedades  titulo          titulo"
-    "novedades  contenidoup     publicidad"
-    "novedades  contenidodown   publicidad"
-    "footer     footer          footer";
-    grid-template-columns: 35vh auto 25vh;
-    grid-template-rows: 10vh 300px auto 30vh;
+    "ganadorestmt tituloTmt      publicidad"
+    "ganadorestmt sectionuptmt   publicidad"
+    "ganadorestmt sectiondowntmt  publicidad"
+    "footer       footer         footer";
+    grid-template-columns: 30vh auto 25vh;
+    grid-template-rows: 100px 500px 500px 30vh;
 }
 
-#titulo{
-    grid-area: titulo;
+#tituloTmt{
+    grid-area: tituloTmt;
     font-family: 'Bangers', cursive;
     color: greenyellow;
     padding-top: 15px;
     box-shadow: 10px 5px 15px greenyellow;
 }
 
-.tituloResponsive{
-    display: none;
-}
-
-#novedades{
-    grid-area: novedades;
+#ganadoresTmt{
+    grid-area: ganadorestmt;
+    display: flex;
+    flex-direction: column;
     color: greenyellow;
-    font-family: 'Bangers', cursive;
     box-shadow: 10px 5px 15px greenyellow;
+    overflow: hidden;
 }
 
-#novedades li a{
-    color: greenyellow;
-    font-family: 'Raleway', sans-serif;
-}
-
-#novedades li{
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#contenidoup{
-    grid-area: contenidoup;
+#sectionuptmt{
+    grid-area: sectionuptmt;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    box-shadow: inset -10px -5px 15px greenyellow;
+    box-shadow: 10px 0px 15px greenyellow;
+}
+
+#sectiondowntmt{
+    grid-area: sectiondowntmt;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow: 10px 5px 15px greenyellow;
+}
+
+#flyer1{
+    display: flex;
+    justify-content: center;
+    grid-area: flyer1;
+    padding: 15px;
+}
+
+#tabla1{
+    grid-area: tabla1;
+    color: greenyellow;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+}
+
+#flyer2{
+    display: flex;
+    justify-content: center;
+    grid-area: flyer2;
+    padding: 15px;
+}
+
+#tabla2{
+    grid-area: tabla2;
+    color: greenyellow;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+}
+
+td{
+    padding: 10px;
+    border: 1px solid green;
+
 }
 
 #publicidad{
     grid-area: publicidad;
     padding-left: 4%;
     box-shadow: 10px 5px 15px greenyellow;
-}
-
-#contenidodown{
-    grid-area: contenidodown;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 10px 5px 15px greenyellow;
-}
-
-.titulo p a{
-    font-family: 'Bangers', cursive;
-    color: greenyellow;
-}
-
-.descripcion{
-    color: greenyellow;
-}
-
-.imagen{
-    display: flex;
-    justify-content: center;
 }
 
 footer{
@@ -142,18 +150,19 @@ footer{
 
 @media screen and (max-width: 1590px) {
 
-    .contenidoPrincipal{
+    .contenidoPrincipaltmt{
         display: grid;
         grid-template-areas: 
-        "novedades  titulo"
-        "novedades  contenidoup"
-        "novedades  contenidodown"
+        "ganadorestmt  tituloTmt"
+        "ganadorestmt  sectionuptmt"
+        "ganadorestmt  sectiondowntmt"
         "publicidad publicidad"
         "footer     footer";
         grid-template-columns: 35vh auto;
         grid-template-rows: 10vh auto auto 30vh 30vh;
     }
 
+    
     .escudoSinTexto{
         display: block;
     }
@@ -180,30 +189,17 @@ footer{
 
 }
 
-@media screen and (max-width: 1342px) {
-
-    .tituloResponsive{
-        display: block;
-    }
-
-    .tituloCompleto{
-        display: none;
-    }
-    
-}
-
 @media screen and (max-width: 991px) {
 
-    .contenidoPrincipal{
+    .contenidoPrincipaltmt{
         display: grid;
         grid-template-areas: 
-        "titulo"
-        "contenidoup"
-        "contenidodown"
-        "novedades"
+        "tituloTmt"
+        "sectionuptmt"
+        "sectiondowntmt"
         "publicidad"
         "footer";
-        grid-template-rows: auto auto auto auto 150px auto;
+        grid-template-rows: auto auto auto 150px 30vh 30vh;
         grid-template-columns: 100%;
     }
 
@@ -223,7 +219,11 @@ footer{
     }
 
     #contenidoup{
-        box-shadow: inset 0px -5px 15px greenyellow;
-}
+        box-shadow: inset 0px -5px 15px greenyellow;    
+    }
+
+    #ganadoresTmt{
+        display: none;
+    }
 
 }
