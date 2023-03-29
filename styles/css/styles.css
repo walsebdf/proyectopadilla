@@ -278,6 +278,7 @@ td{
         grid-template-rows: 10vh auto auto 30vh 30vh;
     }
 
+    /*End pagina TMTs*/
 }
 
 @media screen and (max-width: 1342px) {
@@ -343,5 +344,3 @@ td{
     #ganadoresTmt{
         display: none;
     }
-
-}
