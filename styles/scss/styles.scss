@@ -1,16 +1,27 @@
+$colorprincipal: greenyellow;
+$colorsecundario:green;
+$colorhovertext: rgb(152, 168, 152);
+$fuenteprincipal: 'Bangers', cursive;
+$fuentesecundaria: 'Audiowide', cursive;
+
 body{
     background-image: url(../../images/eeporigdark.jpg);
     background-size: 100%;
 }
 
 header{
-    background: linear-gradient(green, black);
+    background: linear-gradient($colorsecundario, black);
     text-align: center;
-    box-shadow: 10px 5px 15px greenyellow;
+    box-shadow: 10px 5px 15px $colorprincipal;
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    transition: all 3s;
+
+        &:hover {
+            background: $colorsecundario;
+        }
 }
 
 .escudoSinTexto{
@@ -18,7 +29,7 @@ header{
 }
 
 .navbar-brand{
-    color: greenyellow;
+    color: $colorprincipal;
     font-family: 'Audiowide', cursive;
     font-size: 25px;
 }
@@ -26,16 +37,25 @@ header{
 .nav-item{
     padding-left: 20px;
     padding-right: 20px;
+    a {
+        color: $colorprincipal;
+        font-family: 'Raleway', sans-serif;
+        font-size: 20px;
+    }
 }
 
-.nav-item a{
-    color: greenyellow;
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
+#busquedamenu{
+        width: 200px;
+        transition: all 2s;
+}
+
+#busquedamenu:focus{
+    width: 300px;
+    color: $colorsecundario;
 }
 
 .dropdown-menu .dropdown-item{
-    color: green;
+    color: $colorsecundario;
 }
 
 .navbar-toggler .navbar-toggler-icon{
@@ -56,9 +76,9 @@ header{
 #titulo{
     grid-area: titulo;
     font-family: 'Bangers', cursive;
-    color: greenyellow;
+    color: $colorprincipal;
     padding-top: 15px;
-    box-shadow: 10px 5px 15px greenyellow;
+    box-shadow: 10px 5px 15px $colorprincipal;
 }
 
 .tituloResponsive{
@@ -67,19 +87,34 @@ header{
 
 #novedades{
     grid-area: novedades;
-    color: greenyellow;
+    color: $colorprincipal;
     font-family: 'Bangers', cursive;
-    box-shadow: 10px 5px 15px greenyellow;
+    box-shadow: 10px 5px 15px $colorprincipal;
 }
 
-#novedades li a{
-    color: greenyellow;
-    font-family: 'Raleway', sans-serif;
+#novedades{
+
+    li {
+
+        a{
+            color: $colorprincipal;
+            font-family: 'Raleway', sans-serif;
+            &:hover {
+                color: $colorhovertext;
+            }
+        }
+
+    }
+
 }
 
-#novedades li{
-    padding-top: 10px;
-    padding-bottom: 10px;
+#novedades {
+
+    li{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
 }
 
 #contenidoup{
@@ -90,13 +125,13 @@ header{
     align-items: center;
     padding-top: 15px;
     padding-bottom: 15px;
-    box-shadow: inset -10px -5px 15px greenyellow;
+    box-shadow: inset -10px -5px 15px $colorprincipal;
 }
 
 #publicidad{
     grid-area: publicidad;
     padding-left: 4%;
-    box-shadow: 10px 5px 15px greenyellow;
+    box-shadow: 10px 5px 15px $colorprincipal;
 }
 
 #contenidodown{
@@ -105,16 +140,26 @@ header{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 10px 5px 15px greenyellow;
+    box-shadow: 10px 5px 15px $colorprincipal;
 }
 
-.titulo p a{
-    font-family: 'Bangers', cursive;
-    color: greenyellow;
+.titulo {
+
+    p{
+        a{
+            font-family: 'Bangers', cursive;
+            color: $colorprincipal;
+            &:hover {
+                color: $colorhovertext;
+            }
+        }
+
+    }
+
 }
 
 .descripcion{
-    color: greenyellow;
+    color: $colorprincipal;
 }
 
 .imagen{
@@ -128,16 +173,16 @@ footer{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    color: greenyellow;
+    color: $colorprincipal;
 }
 
 .lemaPadillero{
     font-family: 'Bangers', cursive;
-    color: greenyellow;
+    color: $colorprincipal;
 }
 
 .enlaces ul li a{
-    color: greenyellow;
+    color: $colorprincipal;
 }
 
 /*Pagina TMTs*/
@@ -147,7 +192,7 @@ footer{
     grid-template-areas: 
     "ganadorestmt tituloTmt      publicidad"
     "ganadorestmt sectionuptmt   publicidad"
-    "ganadorestmt sectiondowntmt  publicidad"
+    "ganadorestmt sectiondowntmt publicidad"
     "footer       footer         footer";
     grid-template-columns: 30vh auto 25vh;
     grid-template-rows: 100px 500px 500px 30vh;
@@ -156,17 +201,17 @@ footer{
 #tituloTmt{
     grid-area: tituloTmt;
     font-family: 'Bangers', cursive;
-    color: greenyellow;
+    color: $colorprincipal;
     padding-top: 15px;
-    box-shadow: 10px 5px 15px greenyellow;
+    box-shadow: 10px 5px 15px $colorprincipal;
 }
 
 #ganadoresTmt{
     grid-area: ganadorestmt;
     display: flex;
     flex-direction: column;
-    color: greenyellow;
-    box-shadow: 10px 5px 15px greenyellow;
+    color: $colorprincipal;
+    box-shadow: 10px 5px 15px $colorprincipal;
     overflow: hidden;
 }
 
@@ -175,7 +220,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    box-shadow: 10px 0px 15px greenyellow;
+    box-shadow: 10px 0px 15px $colorprincipal;
 }
 
 #sectiondowntmt{
@@ -183,19 +228,20 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    box-shadow: 10px 5px 15px greenyellow;
+    box-shadow: 10px 5px 15px $colorprincipal;
 }
 
 #flyer1{
     display: flex;
     justify-content: center;
+    align-items: center;
     grid-area: flyer1;
     padding: 15px;
 }
 
 #tabla1{
     grid-area: tabla1;
-    color: greenyellow;
+    color: $colorprincipal;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
@@ -205,13 +251,14 @@ footer{
 #flyer2{
     display: flex;
     justify-content: center;
+    align-items: center;
     grid-area: flyer2;
     padding: 15px;
 }
 
 #tabla2{
     grid-area: tabla2;
-    color: greenyellow;
+    color: $colorprincipal;
     display: flex;
     flex-wrap: wrap;
     align-content: space-around;
@@ -220,11 +267,54 @@ footer{
 
 td{
     padding: 10px;
-    border: 1px solid green;
-
+    border: 1px solid $colorsecundario;
 }
 
 /*End página TMTs*/
+
+/*Página Novedades*/
+
+.contenidoPrincipalNov{
+    display: grid;
+    grid-template-areas: 
+    "tituloNov      publicidad"
+    "tabla1Nov      publicidad"
+    "footer         footer";
+    grid-template-columns: auto 30vh;
+    grid-template-rows: 100px 500px 30vh;
+}
+
+#tituloNov{
+    grid-area: tituloNov;
+    color: $colorprincipal;
+    font-family: $fuenteprincipal;
+    padding-top: 15px;
+    box-shadow: 10px 5px 15px $colorprincipal;
+}
+
+#tablaNovedades{
+    background: rgba(228, 0, 0, 0);
+}
+
+#tabla1Nov{
+    grid-area: tabla1Nov;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    tr{
+        background: rgba(0, 0, 0, 0.753);
+        td{
+            color: $colorprincipal;
+            border: none;
+            font-size: 19px;
+        }
+    }
+}
+
+.textoNovedades{
+    display: flex;
+}
 
 @media screen and (max-width: 1590px) {
 
@@ -253,7 +343,7 @@ td{
         flex-wrap: wrap;
         justify-content: space-around;
         align-content: center;
-        box-shadow: inset 0px -5px 15px greenyellow;
+        box-shadow: inset 0px -5px 15px $colorprincipal;
     }
 
     #publicidad2{
@@ -279,6 +369,7 @@ td{
     }
 
     /*End pagina TMTs*/
+
 }
 
 @media screen and (max-width: 1342px) {
@@ -324,7 +415,7 @@ td{
     }
 
     #contenidoup{
-        box-shadow: inset 0px -5px 15px greenyellow;
+        box-shadow: inset 0px -5px 15px $colorprincipal;
     }
 
     /*Pagina TMTs*/
@@ -344,3 +435,22 @@ td{
     #ganadoresTmt{
         display: none;
     }
+
+    /*End pagina TMTs*/
+
+    /*Página de Novedades*/
+
+    .contenidoPrincipalNov{
+        display: grid;
+        grid-template-areas: 
+        "tituloNov"
+        "tabla1Nov"
+        "publicidad"
+        "footer";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto 20vh auto;
+    }
+
+    /*End pagina de novedades*/
+
+}
