@@ -2,7 +2,8 @@ $colorprincipal: greenyellow;
 $colorsecundario:green;
 $colorhovertext: rgb(152, 168, 152);
 $fuenteprincipal: 'Bangers', cursive;
-$fuentesecundaria: 'Audiowide', cursive;
+$fuentesecundaria: 'Raleway', sans-serif;
+$fuenteterciaria: 'Audiowide', cursive;
 
 body{
     background-image: url(../../images/eeporigdark.jpg);
@@ -315,6 +316,184 @@ td{
 .textoNovedades{
     display: flex;
 }
+
+/*Fin página Novedades*/
+
+.contenidoPrincipalJug{
+    display: grid;
+    grid-template-areas: 
+    "tituloJug      publicidad"
+    "tablaJug       publicidad"
+    "footer         footer";
+    grid-template-columns: auto 30vh;
+    grid-template-rows: 100px auto 30vh;
+    
+}
+
+#tituloJug{
+    justify-content: space-around;
+    grid-area: tituloJug;
+    color: $colorprincipal;
+    font-family: $fuenteprincipal;
+    padding-top: 15px;
+    box-shadow: 10px 5px 15px $colorprincipal;
+    padding-bottom: 20px;
+}
+
+#tablaJug{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around ;
+    padding-top: 50px;
+    padding-bottom: 75px;
+    padding-left: 30px;
+}
+
+.jugador{
+    width: 300px;
+    height: 400px;
+    padding-top: 50px;
+    .nombre{
+        font-family: $fuentesecundaria;
+        color: $colorprincipal;
+    }
+}
+
+#lucas{
+    transition: all 1s;
+    &:hover{
+        img{
+            display: none;
+        }
+        .nombre{
+            display: none;
+        }
+        background-image: url(../../images/jugadores/l1.png);
+    }
+}
+
+#sergio{
+    transition: all 2s;
+    &:hover{
+        img{
+            display: none;
+        }
+        .nombre{
+            display: none;
+        }
+        background-image: url(../../images/jugadores/s1.png);
+    }
+}
+
+#walter{
+    transition: all 2s;
+    &:hover{
+        img{
+            display: none;
+        }
+        .nombre{
+            display: none;
+        }
+        background-image: url(../../images/jugadores/w1.png);
+    }
+}
+
+#ezequiel{
+    transition: all 2s;
+    &:hover{
+        img{
+            display: none;
+        }
+        .nombre{
+            display: none;
+        }
+        background-image: url(../../images/jugadores/e1.png);
+    }
+}
+
+#osvaldo{
+    transition: all 2s;
+    &:hover{
+        img{
+            display: none;
+        }
+        .nombre{
+            display: none;
+        }
+        background-image: url(../../images/jugadores/o1.png);
+    }
+}
+
+#jorge{
+    transition: all 2s;
+    &:hover{
+        img{
+            display: none;
+        }
+        .nombre{
+            display: none;
+        }
+        background-image: url(../../images/jugadores/j1.png);
+    }
+}
+
+#mariana{
+    transition: all 2s;
+    &:hover{
+        img{
+            display: none;
+        }
+        .nombre{
+            display: none;
+        }
+        background-image: url(../../images/jugadores/m1.png);
+    }
+}
+
+#emiliana{
+    transition: all 2s;
+    &:hover{
+        img{
+            display: none;
+        }
+        .nombre{
+            display: none;
+        }
+        background-image: url(../../images/jugadores/em1.png);
+    }
+}
+
+#cesar{
+    transition: all 2s;
+    &:hover{
+        img{
+            display: none;
+        }
+        .nombre{
+            display: none;
+        }
+        background-image: url(../../images/jugadores/c1.png);
+    }
+}
+
+#alejandro{
+    transition: all 2s;
+    &:hover{
+        img{
+            display: none;
+        }
+        .nombre{
+            display: none;
+        }
+        background-image: url(../../images/jugadores/a1.png);
+    }
+}
+
+
+
+
+/* Pagina Jugadores */
 
 @media screen and (max-width: 1590px) {
 
