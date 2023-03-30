@@ -493,6 +493,73 @@ td{
 
 /* End pagina Jugadores */
 
+/*Pagina de Contacto*/
+
+.contenidoPrincipalCont{
+    display: grid;
+    grid-template-areas: 
+    "tituloCon      publicidad"
+    "disclaimer     publicidad"
+    "formulario     publicidad"
+    "footer         footer";
+    grid-template-columns: auto 30vh;
+    grid-template-rows: auto auto auto 30vh;
+}
+
+#tituloCon{
+    color: $colorprincipal;
+    font-family: $fuenteprincipal;
+    padding-top: 15px;
+    box-shadow: 10px 5px 15px $colorprincipal;
+    padding-bottom: 20px;
+}
+
+.formularioDeContacto{
+    grid-area: formulario;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    #name{
+        width: 300px;
+    }
+    #surname{
+        width: 300px;
+    }
+    #email{
+        width: 300px;
+    }
+    #phone{
+        width: 300px;
+    }
+    #reason{
+        width: 604px;
+        height: 304px;
+    }
+    div{
+        padding-top: 20px;
+    }
+}
+
+.disclaimer{
+    grid-area: disclaimer;
+    font-family: $fuentesecundaria;
+    font-size: 25px;
+    color: $colorprincipal;
+    padding-top: 50px;
+    background-color: rgba(0, 0, 0, 0.452);
+
+}
+
+
+
+
+/*End pagina de Contacto*/
+
 @media screen and (max-width: 1590px) {
 
     .contenidoPrincipal{
