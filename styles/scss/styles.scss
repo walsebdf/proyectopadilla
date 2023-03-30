@@ -319,6 +319,8 @@ td{
 
 /*Fin página Novedades*/
 
+/*Pagina de Jugadores*/
+
 .contenidoPrincipalJug{
     display: grid;
     grid-template-areas: 
@@ -327,7 +329,6 @@ td{
     "footer         footer";
     grid-template-columns: auto 30vh;
     grid-template-rows: 100px auto 30vh;
-    
 }
 
 #tituloJug{
@@ -490,10 +491,7 @@ td{
     }
 }
 
-
-
-
-/* Pagina Jugadores */
+/* End pagina Jugadores */
 
 @media screen and (max-width: 1590px) {
 
@@ -632,4 +630,18 @@ td{
 
     /*End pagina de novedades*/
 
+    /*Pagina de Jugadores*/
+
+    .contenidoPrincipalJug{
+        display: grid;
+        grid-template-areas: 
+        "tituloJug"
+        "tablaJug"
+        "publicidad"
+        "footer";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto 20vh auto;
+    }
+
+    /*End pagina de Jugadores*/
 }
