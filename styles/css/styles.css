@@ -596,6 +596,14 @@ td {
     grid-template-rows: auto auto 20vh auto;
   }
   /*End pagina de Jugadores*/
+  /*Pagina de Contacto*/
+  .contenidoPrincipalCont {
+    display: grid;
+    grid-template-areas: "tituloCon" "disclaimer" "formulario" "publicidad" "footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto 20vh auto;
+  }
+  /*End pagina de contacto*/
 }
 
 /*# sourceMappingURL=styles.css.map */
