@@ -118,6 +118,7 @@ header:hover {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  padding-bottom: 20px;
   box-shadow: 10px 5px 15px greenyellow;
 }
 
@@ -263,6 +264,7 @@ td {
   flex-wrap: wrap;
   align-content: space-around;
   justify-content: center;
+  box-shadow: 10px 5px 15px greenyellow;
 }
 #tabla1Nov tr {
   background: rgba(0, 0, 0, 0.753);
@@ -304,6 +306,7 @@ td {
   padding-top: 50px;
   padding-bottom: 75px;
   padding-left: 30px;
+  box-shadow: 10px 5px 15px greenyellow;
 }
 
 .jugador {
@@ -473,6 +476,7 @@ td {
   align-items: center;
   padding-top: 20px;
   padding-bottom: 50px;
+  box-shadow: 10px 5px 15px greenyellow;
 }
 .formularioDeContacto #name {
   width: 300px;
@@ -491,7 +495,12 @@ td {
   height: 304px;
 }
 .formularioDeContacto div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
   padding-top: 20px;
+  padding: 10px;
 }
 
 .disclaimer {
