@@ -608,19 +608,19 @@ td {
   }
   @keyframes tituloresponsive-efecto {
     0% {
-      font-size: 40px;
+      font-size: 35px;
     }
     25% {
-      font-size: 42px;
+      font-size: 37px;
     }
     50% {
-      font-size: 41px;
+      font-size: 36px;
     }
     75% {
-      font-size: 42px;
+      font-size: 37px;
     }
     100% {
-      font-size: 40px;
+      font-size: 35px;
     }
   }
   .tituloCompleto {
