@@ -273,7 +273,7 @@ td {
   display: grid;
   grid-template-areas: "tituloNov      publicidad" "tabla1Nov      publicidad" "footer         footer";
   grid-template-columns: auto 25vh;
-  grid-template-rows: 100px 500px 30vh;
+  grid-template-rows: 100px auto 30vh;
 }
 
 #tituloNov {
@@ -292,7 +292,8 @@ td {
   grid-area: tabla1Nov;
   display: flex;
   flex-wrap: wrap;
-  align-content: space-around;
+  align-content: flex-start;
+  padding-top: 15px;
   justify-content: center;
   box-shadow: 10px 5px 15px greenyellow;
 }
