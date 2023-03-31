@@ -135,6 +135,9 @@ header:hover {
 
 #publicidad {
   grid-area: publicidad;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   padding-left: 4%;
   box-shadow: 10px 5px 15px greenyellow;
 }
@@ -269,7 +272,7 @@ td {
 .contenidoPrincipalNov {
   display: grid;
   grid-template-areas: "tituloNov      publicidad" "tabla1Nov      publicidad" "footer         footer";
-  grid-template-columns: auto 30vh;
+  grid-template-columns: auto 25vh;
   grid-template-rows: 100px 500px 30vh;
 }
 
@@ -311,7 +314,7 @@ td {
 .contenidoPrincipalJug {
   display: grid;
   grid-template-areas: "tituloJug      publicidad" "tablaJug       publicidad" "footer         footer";
-  grid-template-columns: auto 30vh;
+  grid-template-columns: auto 25vh;
   grid-template-rows: 100px auto 30vh;
 }
 
@@ -494,16 +497,16 @@ td {
 .contenidoPrincipalCont {
   display: grid;
   grid-template-areas: "tituloCon      publicidad" "disclaimer     publicidad" "formulario     publicidad" "footer         footer";
-  grid-template-columns: auto 30vh;
-  grid-template-rows: auto auto auto 30vh;
+  grid-template-columns: auto 25vh;
+  grid-template-rows: 100px auto auto 30vh;
 }
 
 #tituloCon {
+  grid-area: tituloCon;
   color: greenyellow;
   font-family: "Bangers", cursive;
   padding-top: 15px;
   box-shadow: 10px 5px 15px greenyellow;
-  padding-bottom: 20px;
 }
 
 .formularioDeContacto {
@@ -531,7 +534,7 @@ td {
   width: 300px;
 }
 .formularioDeContacto #reason {
-  width: 604px;
+  width: 614px;
   height: 304px;
 }
 .formularioDeContacto div {
@@ -539,8 +542,10 @@ td {
   flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
-  padding-top: 20px;
-  padding: 10px;
+  padding-top: 10px;
+}
+.formularioDeContacto input {
+  margin: 10px;
 }
 
 .disclaimer {
@@ -550,6 +555,8 @@ td {
   color: greenyellow;
   padding-top: 50px;
   background-color: rgba(0, 0, 0, 0.452);
+  box-shadow: 10px 5px 15px greenyellow;
+  z-index: -1;
 }
 
 /*End pagina de Contacto*/
