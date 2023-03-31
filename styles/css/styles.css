@@ -66,11 +66,38 @@ header:hover {
 #titulo {
   grid-area: titulo;
   font-family: "Bangers", cursive;
+  font-size: 20px;
   color: greenyellow;
   padding-top: 15px;
   box-shadow: 10px 5px 15px greenyellow;
 }
 
+.tituloCompleto {
+  font-size: 20px;
+  animation-name: titulocompleto-efecto;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+
+@keyframes titulocompleto-efecto {
+  0% {
+    font-size: 40px;
+  }
+  25% {
+    font-size: 42px;
+  }
+  50% {
+    font-size: 41px;
+  }
+  75% {
+    font-size: 42px;
+  }
+  100% {
+    font-size: 40px;
+  }
+}
 .tituloResponsive {
   display: none;
 }
@@ -332,6 +359,19 @@ td {
   display: none;
 }
 
+#nestor {
+  transition: all 1s;
+}
+#nestor:hover {
+  background-image: url(../../images/jugadores/n1.png);
+}
+#nestor:hover img {
+  display: none;
+}
+#nestor:hover .nombre {
+  display: none;
+}
+
 #sergio {
   transition: all 2s;
 }
@@ -551,6 +591,29 @@ td {
 @media screen and (max-width: 1342px) {
   .tituloResponsive {
     display: block;
+    font-size: 20px;
+    animation-name: tituloresponsive-efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-delay: 1s;
+  }
+  @keyframes tituloresponsive-efecto {
+    0% {
+      font-size: 40px;
+    }
+    25% {
+      font-size: 42px;
+    }
+    50% {
+      font-size: 41px;
+    }
+    75% {
+      font-size: 42px;
+    }
+    100% {
+      font-size: 40px;
+    }
   }
   .tituloCompleto {
     display: none;
@@ -560,7 +623,7 @@ td {
   .contenidoPrincipal {
     display: grid;
     grid-template-areas: "titulo" "contenidoup" "contenidodown" "novedades" "publicidad" "footer";
-    grid-template-rows: auto auto auto auto 150px auto;
+    grid-template-rows: 10vh auto auto auto 150px auto;
     grid-template-columns: 100%;
   }
   #publicidad {

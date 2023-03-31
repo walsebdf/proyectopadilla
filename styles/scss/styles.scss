@@ -77,9 +77,27 @@ header{
 #titulo{
     grid-area: titulo;
     font-family: 'Bangers', cursive;
+    font-size: 20px;
     color: $colorprincipal;
     padding-top: 15px;
     box-shadow: 10px 5px 15px $colorprincipal;
+}
+
+.tituloCompleto{
+    font-size: 20px;
+    animation-name: titulocompleto-efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-delay: 1s;
+}
+
+@keyframes titulocompleto-efecto{
+    0% {font-size: 40px;}
+    25% {font-size: 42px;}
+    50% {font-size: 41px;}
+    75% {font-size: 42px;}
+    100% {font-size: 40px;}
 }
 
 .tituloResponsive{
@@ -377,6 +395,19 @@ td{
     }
 }
 
+#nestor{
+    transition: all 1s;
+    &:hover{
+        img{
+            display: none;
+        }
+        .nombre{
+            display: none;
+        }
+        background-image: url(../../images/jugadores/n1.png);
+    }
+}
+
 #sergio{
     transition: all 2s;
     &:hover{
@@ -625,6 +656,20 @@ td{
 
     .tituloResponsive{
         display: block;
+        font-size: 20px;
+        animation-name: tituloresponsive-efecto;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-duration: 1s;
+        animation-delay: 1s;
+    }
+
+    @keyframes tituloresponsive-efecto{
+        0% {font-size: 40px;}
+        25% {font-size: 42px;}
+        50% {font-size: 41px;}
+        75% {font-size: 42px;}
+        100% {font-size: 40px;}
     }
 
     .tituloCompleto{
@@ -644,7 +689,7 @@ td{
         "novedades"
         "publicidad"
         "footer";
-        grid-template-rows: auto auto auto auto 150px auto;
+        grid-template-rows: 10vh auto auto auto 150px auto;
         grid-template-columns: 100%;
     }
 
