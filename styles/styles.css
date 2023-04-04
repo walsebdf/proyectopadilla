@@ -1,0 +1,689 @@
+@charset "UTF-8";
+body {
+  background-image: url(../../images/eeporigdark.jpg);
+  background-size: 100%;
+}
+
+header {
+  background: linear-gradient(green, black);
+  text-align: center;
+  box-shadow: 10px 5px 15px greenyellow;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: all 3s;
+}
+header:hover {
+  background: green;
+}
+
+.escudoSinTexto {
+  display: none;
+}
+
+.navbar-brand {
+  color: greenyellow;
+  font-family: "Audiowide", cursive;
+  font-size: 25px;
+}
+
+.nav-item {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.nav-item a {
+  color: greenyellow;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+}
+
+#busquedamenu {
+  width: 200px;
+  transition: all 2s;
+}
+
+#busquedamenu:focus {
+  width: 300px;
+  color: green;
+}
+
+.dropdown-menu .dropdown-item {
+  color: green;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28156, 255, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.contenidoPrincipal {
+  display: grid;
+  grid-template-areas: "novedades  titulo          titulo" "novedades  contenidoup     publicidad" "novedades  contenidodown   publicidad" "footer     footer          footer";
+  grid-template-columns: 35vh auto 25vh;
+  grid-template-rows: 10vh 300px auto 30vh;
+}
+
+#titulo {
+  grid-area: titulo;
+  font-family: "Bangers", cursive;
+  font-size: 20px;
+  color: greenyellow;
+  padding-top: 15px;
+  box-shadow: 10px 5px 15px greenyellow;
+}
+
+.tituloCompleto {
+  font-size: 20px;
+  animation-name: titulocompleto-efecto;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+  animation-delay: 1s;
+}
+
+@keyframes titulocompleto-efecto {
+  0% {
+    font-size: 40px;
+  }
+  25% {
+    font-size: 42px;
+  }
+  50% {
+    font-size: 41px;
+  }
+  75% {
+    font-size: 42px;
+  }
+  100% {
+    font-size: 40px;
+  }
+}
+.tituloResponsive {
+  display: none;
+}
+
+#novedades {
+  grid-area: novedades;
+  color: greenyellow;
+  font-family: "Bangers", cursive;
+  box-shadow: 10px 5px 15px greenyellow;
+}
+
+#novedades li a {
+  color: greenyellow;
+  font-family: "Raleway", sans-serif;
+}
+#novedades li a:hover {
+  color: rgb(152, 168, 152);
+}
+
+#novedades li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#contenidoup {
+  grid-area: contenidoup;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: inset -10px -5px 15px greenyellow;
+}
+
+#publicidad {
+  grid-area: publicidad;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 4%;
+  box-shadow: 10px 5px 15px greenyellow;
+}
+
+#contenidodown {
+  grid-area: contenidodown;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
+  box-shadow: 10px 5px 15px greenyellow;
+}
+
+.titulo p a {
+  font-family: "Bangers", cursive;
+  color: greenyellow;
+}
+.titulo p a:hover {
+  color: rgb(152, 168, 152);
+}
+
+.descripcion {
+  color: greenyellow;
+}
+
+.imagen {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  color: greenyellow;
+}
+
+.lemaPadillero {
+  font-family: "Bangers", cursive;
+  color: greenyellow;
+}
+
+.enlaces ul li a {
+  color: greenyellow;
+}
+
+/*Pagina TMTs*/
+.contenidoPrincipaltmt {
+  display: grid;
+  grid-template-areas: "ganadorestmt tituloTmt      publicidad" "ganadorestmt sectionuptmt   publicidad" "ganadorestmt sectiondowntmt publicidad" "footer       footer         footer";
+  grid-template-columns: 30vh auto 25vh;
+  grid-template-rows: 100px 500px 500px 30vh;
+}
+
+#tituloTmt {
+  grid-area: tituloTmt;
+  font-family: "Bangers", cursive;
+  color: greenyellow;
+  padding-top: 15px;
+  box-shadow: 10px 5px 15px greenyellow;
+}
+
+#ganadoresTmt {
+  grid-area: ganadorestmt;
+  display: flex;
+  flex-direction: column;
+  color: greenyellow;
+  box-shadow: 10px 5px 15px greenyellow;
+  overflow: hidden;
+}
+
+#sectionuptmt {
+  grid-area: sectionuptmt;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-shadow: 10px 0px 15px greenyellow;
+}
+
+#sectiondowntmt {
+  grid-area: sectiondowntmt;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-shadow: 10px 5px 15px greenyellow;
+}
+
+#flyer1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: flyer1;
+  padding: 15px;
+}
+
+#tabla1 {
+  grid-area: tabla1;
+  color: greenyellow;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+}
+
+#flyer2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: flyer2;
+  padding: 15px;
+}
+
+#tabla2 {
+  grid-area: tabla2;
+  color: greenyellow;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid green;
+}
+
+/*End página TMTs*/
+/*Página Novedades*/
+.contenidoPrincipalNov {
+  display: grid;
+  grid-template-areas: "tituloNov      publicidad" "tabla1Nov      publicidad" "footer         footer";
+  grid-template-columns: auto 25vh;
+  grid-template-rows: 100px auto 30vh;
+}
+
+#tituloNov {
+  grid-area: tituloNov;
+  color: greenyellow;
+  font-family: "Bangers", cursive;
+  padding-top: 15px;
+  box-shadow: 10px 5px 15px greenyellow;
+}
+
+#tablaNovedades {
+  background: rgba(228, 0, 0, 0);
+}
+
+#tabla1Nov {
+  grid-area: tabla1Nov;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  padding-top: 15px;
+  justify-content: center;
+  box-shadow: 10px 5px 15px greenyellow;
+}
+#tabla1Nov tr {
+  background: rgba(0, 0, 0, 0.753);
+}
+#tabla1Nov tr td {
+  color: greenyellow;
+  border: none;
+  font-size: 19px;
+}
+
+.textoNovedades {
+  display: flex;
+}
+
+/*Fin página Novedades*/
+/*Pagina de Jugadores*/
+.contenidoPrincipalJug {
+  display: grid;
+  grid-template-areas: "tituloJug      publicidad" "tablaJug       publicidad" "footer         footer";
+  grid-template-columns: auto 25vh;
+  grid-template-rows: 100px auto 30vh;
+}
+
+#tituloJug {
+  justify-content: space-around;
+  grid-area: tituloJug;
+  color: greenyellow;
+  font-family: "Bangers", cursive;
+  padding-top: 15px;
+  box-shadow: 10px 5px 15px greenyellow;
+  padding-bottom: 20px;
+}
+
+#tablaJug {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  padding-top: 50px;
+  padding-bottom: 75px;
+  padding-left: 30px;
+  box-shadow: 10px 5px 15px greenyellow;
+}
+
+.jugador {
+  width: 300px;
+  height: 400px;
+  padding-top: 50px;
+}
+.jugador .nombre {
+  font-family: "Raleway", sans-serif;
+  color: greenyellow;
+}
+
+#lucas {
+  transition: all 1s;
+}
+#lucas:hover {
+  background-image: url(../../images/jugadores/l1.png);
+}
+#lucas:hover img {
+  display: none;
+}
+#lucas:hover .nombre {
+  display: none;
+}
+
+#nestor {
+  transition: all 1s;
+}
+#nestor:hover {
+  background-image: url(../../images/jugadores/n1.png);
+}
+#nestor:hover img {
+  display: none;
+}
+#nestor:hover .nombre {
+  display: none;
+}
+
+#sergio {
+  transition: all 2s;
+}
+#sergio:hover {
+  background-image: url(../../images/jugadores/s1.png);
+}
+#sergio:hover img {
+  display: none;
+}
+#sergio:hover .nombre {
+  display: none;
+}
+
+#walter {
+  transition: all 2s;
+}
+#walter:hover {
+  background-image: url(../../images/jugadores/w1.png);
+}
+#walter:hover img {
+  display: none;
+}
+#walter:hover .nombre {
+  display: none;
+}
+
+#ezequiel {
+  transition: all 2s;
+}
+#ezequiel:hover {
+  background-image: url(../../images/jugadores/e1.png);
+}
+#ezequiel:hover img {
+  display: none;
+}
+#ezequiel:hover .nombre {
+  display: none;
+}
+
+#osvaldo {
+  transition: all 2s;
+}
+#osvaldo:hover {
+  background-image: url(../../images/jugadores/o1.png);
+}
+#osvaldo:hover img {
+  display: none;
+}
+#osvaldo:hover .nombre {
+  display: none;
+}
+
+#jorge {
+  transition: all 2s;
+}
+#jorge:hover {
+  background-image: url(../../images/jugadores/j1.png);
+}
+#jorge:hover img {
+  display: none;
+}
+#jorge:hover .nombre {
+  display: none;
+}
+
+#mariana {
+  transition: all 2s;
+}
+#mariana:hover {
+  background-image: url(../../images/jugadores/m1.png);
+}
+#mariana:hover img {
+  display: none;
+}
+#mariana:hover .nombre {
+  display: none;
+}
+
+#emiliana {
+  transition: all 2s;
+}
+#emiliana:hover {
+  background-image: url(../../images/jugadores/em1.png);
+}
+#emiliana:hover img {
+  display: none;
+}
+#emiliana:hover .nombre {
+  display: none;
+}
+
+#cesar {
+  transition: all 2s;
+}
+#cesar:hover {
+  background-image: url(../../images/jugadores/c1.png);
+}
+#cesar:hover img {
+  display: none;
+}
+#cesar:hover .nombre {
+  display: none;
+}
+
+#alejandro {
+  transition: all 2s;
+}
+#alejandro:hover {
+  background-image: url(../../images/jugadores/a1.png);
+}
+#alejandro:hover img {
+  display: none;
+}
+#alejandro:hover .nombre {
+  display: none;
+}
+
+/* End pagina Jugadores */
+/*Pagina de Contacto*/
+.contenidoPrincipalCont {
+  display: grid;
+  grid-template-areas: "tituloCon      publicidad" "disclaimer     publicidad" "formulario     publicidad" "footer         footer";
+  grid-template-columns: auto 25vh;
+  grid-template-rows: 100px auto auto 30vh;
+}
+
+#tituloCon {
+  grid-area: tituloCon;
+  color: greenyellow;
+  font-family: "Bangers", cursive;
+  padding-top: 15px;
+  box-shadow: 10px 5px 15px greenyellow;
+}
+
+.formularioDeContacto {
+  grid-area: formulario;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  box-shadow: 10px 5px 15px greenyellow;
+}
+.formularioDeContacto #name {
+  width: 300px;
+}
+.formularioDeContacto #surname {
+  width: 300px;
+}
+.formularioDeContacto #email {
+  width: 300px;
+}
+.formularioDeContacto #phone {
+  width: 300px;
+}
+.formularioDeContacto #reason {
+  width: 614px;
+  height: 304px;
+}
+.formularioDeContacto div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: center;
+  padding-top: 10px;
+}
+.formularioDeContacto input {
+  margin: 10px;
+}
+
+.disclaimer {
+  grid-area: disclaimer;
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  color: greenyellow;
+  padding-top: 50px;
+  background-color: rgba(0, 0, 0, 0.452);
+  box-shadow: 10px 5px 15px greenyellow;
+  z-index: -1;
+}
+
+/*End pagina de Contacto*/
+@media screen and (max-width: 1590px) {
+  .contenidoPrincipal {
+    display: grid;
+    grid-template-areas: "novedades  titulo" "novedades  contenidoup" "novedades  contenidodown" "publicidad publicidad" "footer     footer";
+    grid-template-columns: 35vh auto;
+    grid-template-rows: 10vh auto auto 30vh 30vh;
+  }
+  .escudoSinTexto {
+    display: block;
+  }
+  .escudoConTexto {
+    display: none;
+  }
+  #publicidad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    box-shadow: inset 0px -5px 15px greenyellow;
+  }
+  #publicidad2 {
+    display: none;
+  }
+  #publicidad4 {
+    display: none;
+  }
+  /*Pagina TMTs*/
+  .contenidoPrincipaltmt {
+    display: grid;
+    grid-template-areas: "ganadorestmt  tituloTmt" "ganadorestmt  sectionuptmt" "ganadorestmt  sectiondowntmt" "publicidad publicidad" "footer     footer";
+    grid-template-columns: 35vh auto;
+    grid-template-rows: 10vh auto auto 30vh 30vh;
+  }
+  /*End pagina TMTs*/
+}
+@media screen and (max-width: 1342px) {
+  .tituloResponsive {
+    display: block;
+    font-size: 20px;
+    animation-name: tituloresponsive-efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    animation-delay: 1s;
+  }
+  @keyframes tituloresponsive-efecto {
+    0% {
+      font-size: 35px;
+    }
+    25% {
+      font-size: 37px;
+    }
+    50% {
+      font-size: 36px;
+    }
+    75% {
+      font-size: 37px;
+    }
+    100% {
+      font-size: 35px;
+    }
+  }
+  .tituloCompleto {
+    display: none;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contenidoPrincipal {
+    display: grid;
+    grid-template-areas: "titulo" "contenidoup" "contenidodown" "novedades" "publicidad" "footer";
+    grid-template-rows: 10vh auto auto auto 150px auto;
+    grid-template-columns: 100%;
+  }
+  #publicidad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+  }
+  #publicidad1 {
+    display: none;
+  }
+  #publicidad3 {
+    display: none;
+  }
+  #contenidoup {
+    box-shadow: inset 0px -5px 15px greenyellow;
+  }
+  /*Pagina TMTs*/
+  .contenidoPrincipaltmt {
+    display: grid;
+    grid-template-areas: "tituloTmt" "sectionuptmt" "sectiondowntmt" "publicidad" "footer";
+    grid-template-rows: auto auto auto 150px 30vh 30vh;
+    grid-template-columns: 100%;
+  }
+  #ganadoresTmt {
+    display: none;
+  }
+  /*End pagina TMTs*/
+  /*Página de Novedades*/
+  .contenidoPrincipalNov {
+    display: grid;
+    grid-template-areas: "tituloNov" "tabla1Nov" "publicidad" "footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 20vh auto;
+  }
+  /*End pagina de novedades*/
+  /*Pagina de Jugadores*/
+  .contenidoPrincipalJug {
+    display: grid;
+    grid-template-areas: "tituloJug" "tablaJug" "publicidad" "footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto 20vh auto;
+  }
+  /*End pagina de Jugadores*/
+  /*Pagina de Contacto*/
+  .contenidoPrincipalCont {
+    display: grid;
+    grid-template-areas: "tituloCon" "disclaimer" "formulario" "publicidad" "footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto 20vh auto;
+  }
+  /*End pagina de contacto*/
+}
+
+/*# sourceMappingURL=styles.css.map */
