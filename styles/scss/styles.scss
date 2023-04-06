@@ -722,6 +722,16 @@ td{
 
     /*Pagina NovSL*/
 
+    .contenidoPrincipalNovSL{
+        display: grid;
+        grid-template-areas: 
+        "tituloF8UVVA   publicidad"
+        "notaUVVA       publicidad"
+        "footer         footer";
+        grid-template-columns: auto 30vh;
+        grid-template-rows: 100px auto 30vh;
+    }
+
     /*End NovSL*/
 
 }
@@ -851,5 +861,19 @@ td{
     }
     /*End pagina de contacto*/
 
+    /*Pagina de NovSL*/
+
+    .contenidoPrincipalNovSL{
+        display: grid;
+        grid-template-areas: 
+        "tituloF8UVVA"
+        "notaUVVA"
+        "publicidad"
+        "footer";
+        grid-template-columns: auto;
+        grid-template-rows: 100px auto auto 30vh;
+    }
+
+    /*End página de NovSL*/
 
 }
