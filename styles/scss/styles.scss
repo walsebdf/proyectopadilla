@@ -631,8 +631,9 @@ td{
     "tablaF8            ";
     grid-template-columns: auto;
     grid-template-rows: 100px auto auto auto auto auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 10px 5px 15px $colorprincipal;
 }
 
 .tituloF8UVVA{
@@ -651,15 +652,13 @@ td{
     }
 }
 
-.tablaf8{
-    grid-area: tablaf8;
+
+.tablaPosicionesf8{
     display: flex;
-    flex-direction: column;
-    .tablaPosicionesf8{
-        display: flex;
-        justify-content: center;
-    }
+    justify-content: center;
+    padding: 20px;
 }
+
 
 .tituloTabla{
     font-family: $fuenteprincipal;
