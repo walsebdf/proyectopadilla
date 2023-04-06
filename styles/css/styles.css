@@ -594,12 +594,20 @@ td {
 
 .narracionF8UVVA {
   grid-area: narracionF8UVVA;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   font-family: "Raleway", sans-serif;
   color: greenyellow;
+  font-size: 30px;
 }
 .narracionF8UVVA div {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-content: center;
+  font-size: 20px;
 }
 
 .tablaPosicionesf8 {
@@ -613,6 +621,7 @@ td {
   color: greenyellow;
 }
 
+/*End Página de NovSL*/
 /*Comienzo de los MQ*/
 @media screen and (max-width: 1590px) {
   .contenidoPrincipal {
