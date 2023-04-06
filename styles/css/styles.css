@@ -561,6 +561,62 @@ td {
 }
 
 /*End pagina de Contacto*/
+/*Comienzo página NovSL*/
+.contenidoPrincipalNovSL {
+  display: grid;
+  grid-template-areas: "tituloF8UVVA   publicidad" "notaUVVA       publicidad" "footer         footer";
+  grid-template-columns: auto 25vh;
+  grid-template-rows: 100px auto 30vh;
+}
+
+#tituloNovSL {
+  grid-area: tituloF8UVVA;
+  color: greenyellow;
+  font-family: "Bangers", cursive;
+}
+
+#notaUVVA {
+  grid-area: notaUVVA;
+  display: grid;
+  grid-template-areas: "tituloNotaf8" "narracionF8UVVA" "tablaF8            ";
+  grid-template-columns: auto;
+  grid-template-rows: 100px auto auto auto auto auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.tituloF8UVVA {
+  grid-area: tituloNotaf8;
+  font-family: "Bangers", cursive;
+  color: greenyellow;
+}
+
+.narracionF8UVVA {
+  grid-area: narracionF8UVVA;
+  font-family: "Raleway", sans-serif;
+  color: greenyellow;
+}
+.narracionF8UVVA div {
+  display: flex;
+  justify-content: center;
+}
+
+.tablaf8 {
+  grid-area: tablaf8;
+  display: flex;
+  flex-direction: column;
+}
+.tablaf8 .tablaPosicionesf8 {
+  display: flex;
+  justify-content: center;
+}
+
+.tituloTabla {
+  font-family: "Bangers", cursive;
+  color: greenyellow;
+}
+
+/*Comienzo de los MQ*/
 @media screen and (max-width: 1590px) {
   .contenidoPrincipal {
     display: grid;
@@ -595,6 +651,8 @@ td {
     grid-template-rows: 10vh auto auto 30vh 30vh;
   }
   /*End pagina TMTs*/
+  /*Pagina NovSL*/
+  /*End NovSL*/
 }
 @media screen and (max-width: 1342px) {
   .tituloResponsive {

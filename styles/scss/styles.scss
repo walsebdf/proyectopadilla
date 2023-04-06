@@ -604,6 +604,69 @@ td{
 
 /*End pagina de Contacto*/
 
+/*Comienzo página NovSL*/
+
+.contenidoPrincipalNovSL{
+    display: grid;
+    grid-template-areas: 
+    "tituloF8UVVA   publicidad"
+    "notaUVVA       publicidad"
+    "footer         footer";
+    grid-template-columns: auto 25vh;
+    grid-template-rows: 100px auto 30vh;
+}
+
+#tituloNovSL{
+    grid-area: tituloF8UVVA;
+    color: $colorprincipal;
+    font-family: $fuenteprincipal;
+}
+
+#notaUVVA{
+    grid-area: notaUVVA;
+    display: grid;
+    grid-template-areas:
+    "tituloNotaf8"
+    "narracionF8UVVA"
+    "tablaF8            ";
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto auto auto auto auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.tituloF8UVVA{
+    grid-area: tituloNotaf8;
+    font-family: $fuenteprincipal;
+    color: $colorprincipal;
+}
+
+.narracionF8UVVA{
+    grid-area: narracionF8UVVA;
+    font-family: $fuentesecundaria;
+    color: $colorprincipal;
+    div{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.tablaf8{
+    grid-area: tablaf8;
+    display: flex;
+    flex-direction: column;
+    .tablaPosicionesf8{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.tituloTabla{
+    font-family: $fuenteprincipal;
+    color: $colorprincipal;
+}
+/*Comienzo de los MQ*/
+
 @media screen and (max-width: 1590px) {
 
     .contenidoPrincipal{
@@ -657,6 +720,10 @@ td{
     }
 
     /*End pagina TMTs*/
+
+    /*Pagina NovSL*/
+
+    /*End NovSL*/
 
 }
 
@@ -784,4 +851,6 @@ td{
         grid-template-rows: auto auto auto 20vh auto;
     }
     /*End pagina de contacto*/
+
+
 }
